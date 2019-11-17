@@ -17,15 +17,17 @@
             <th>Added</th>
             <th>Actions</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>
-                <a href="#">Delete</a>
-                <br>
-                <a href="#">Update</a>
-            </td>
-        </tr>
+        {% for todo in todos  %}
+            <tr>
+                <td>{{ todo.content }}</td>
+                <td>{{ todo.date_created.date() }}</td>
+                <td>
+                    <a href="#">Delete</a>
+                    <br>
+                    <a href="#">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
     </table>
 
     <form action="/" method="POST">
