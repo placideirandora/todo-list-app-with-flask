@@ -29,8 +29,10 @@ def index():
             return 'Error: the todo could not be added.'
 
     else:
-        todos = Todo.query.order_by(Todo.date_created).all()
-        return render_template('index.html', todos = todos)
+        # db.session.query(Todo).delete()
+        # db.session.commit()
+        todos = Todo.query.all()
+        return render_template('index.html', todos=todos)
 
 
 if __name__ == '__main__':
