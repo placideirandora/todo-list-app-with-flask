@@ -45,6 +45,9 @@
 					</div>
 
 					<ul class="list-group t20">
+						{% if not todos %}
+							<p class="list-group-item">You don't have any todos</p>
+						{% endif %}
 						{% for todo in todos %}	
                             <li class="list-group-item">{{ todo.content }}</li>	
 						{% endfor %}	
