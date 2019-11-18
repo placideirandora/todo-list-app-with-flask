@@ -14,3 +14,14 @@ $ git clone https://github.com/placideirandora/todo-list-app-with-flask
 ```
 $ Open the vscode extensions tab, find and install the Python extension by Microsoft. 
 ```
+
+### Start The Server
+```
+$ navigate to the 'src' sub folder.
+```
+```
+$ python app.py
+```
+```
+$ navigate to 'http://localhost:5000/' to visit the web app
+```
