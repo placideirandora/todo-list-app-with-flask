@@ -6,6 +6,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db' 
 db = SQLAlchemy(app)
 
+
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(30), nullable=False)
@@ -13,6 +14,7 @@ class Todo(db.Model):
 
     def __repr__(self):
         return '<Task %r>' % self.id
+
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
@@ -71,6 +73,3 @@ def delete_all():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
