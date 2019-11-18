@@ -45,11 +45,9 @@
 					</div>
 
 					<ul class="list-group t20">
-							
-                            <li class="list-group-item">Read my favorite book.</li>	
-                            <li class="list-group-item todo-completed">Watch my favorite movie.</li>	
-                            <li class="list-group-item">Play my favorite game.</li>
-							
+						{% for todo in todos %}	
+                            <li class="list-group-item">{{ todo.content }}</li>	
+						{% endfor %}	
 					</ul>
 				</div>
 			</div>
