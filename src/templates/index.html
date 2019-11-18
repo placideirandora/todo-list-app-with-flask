@@ -49,7 +49,11 @@
 							<p class="list-group-item">You don't have any todos</p>
 						{% endif %}
 						{% for todo in todos %}	
-                            <li class="list-group-item">{{ todo.content }}</li>	
+							{% if todo.completed %}
+								<li class="list-group-item">{{ todo.content }}</li>	
+							{% else %}
+								<li class="list-group-item">{{ todo.content }}</li>	
+							{% endif %}
 						{% endfor %}	
 					</ul>
 				</div>
