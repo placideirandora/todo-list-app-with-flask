@@ -29,8 +29,6 @@ def index():
             return 'Error: the todo could not be added.'
 
     else:
-        # db.session.query(Todo).delete()
-        # db.session.commit()
         todos = Todo.query.all()
         return render_template('index.html', todos=todos)
 
@@ -58,6 +56,17 @@ def delete_completed():
 
     except:
         return 'Error: the completed todos deletion failed'
+
+
+@app.route('/delete-all')
+def delete_all():
+    try:
+        db.session.query(Todo).delete()
+        db.session.commit()
+        return redirect('/')
+
+    except:
+        return 'Error: the todos deletion failed'
 
 
 if __name__ == '__main__':
