@@ -1,6 +1,11 @@
 # TO-DO LIST (FLASK)
 A full-stack web application for managing/tracking your to-dos.
 
+## DEPLOYMENT
+
+- **Heroku** - [Visit The App](https://todo-list-app-flask.herokuapp.com/)
+
+
 ## GETTING STARTED
 
 ### Clone The Project
