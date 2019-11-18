@@ -35,6 +35,19 @@ def index():
         return render_template('index.html', todos=todos)
 
 
+@app.route('/complete/<int:id>')
+def complete_todo(id):
+    todo = Todo.query.get_or_404(id)
+    todo.completed = True
+
+    try:
+        db.session.commit()
+        return redirect('/')
+
+    except:
+        return 'Error: the todo completion failed.'
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
