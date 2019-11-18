@@ -48,6 +48,18 @@ def complete_todo(id):
         return 'Error: the todo completion failed.'
 
 
+@app.route('/delete-completed')
+def delete_completed():
+    Todo.query.filter_by(completed=True).delete()
+
+    try:
+        db.session.commit()
+        return redirect('/')
+
+    except:
+        return 'Error: the completed todos deletion failed'
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
