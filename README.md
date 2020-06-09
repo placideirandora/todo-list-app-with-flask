@@ -11,7 +11,7 @@ A full-stack web application for managing/tracking your to-dos.
 ### Clone The Project
 
 ```
-$ git clone https://github.com/placideirandora/todo-list-app-with-flask
+$ git clone https://github.com/placiderapson/todo-list-app-with-flask
 ```
 
 ### Install Python Extension
